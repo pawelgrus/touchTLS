@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Zmiana ustawień logowania - MobileTouch</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Stylesheet CSS -->
+    <link rel="stylesheet" href="css/lumen.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+    <link rel="icon" href="img/favicon.png" type="image/png" sizes="16x16">
+
+</head>
+<body>
+    <section class="container-fluid">
+        <div class="row brands">
+            <div class="col-xs-12 col-md-3 brands_item">
+                <img src="img/abs-logo.svg" class="logo" alt="">
+            </div>
+            <div class="col-xs-12 col-md-9 brands_item brands_item--right">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle dropdown_button--a" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <img src="img/flag-pl.png" alt=""> Polski
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">English</a></li>
+                    </ul>
+                </div>
+                <img src="img/touch.png" class="touch" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="row info">
+            <div class="col-xs-12 col-md-6 info_text">
+                <h3><span class="abs-icon abs_info_point"></span>Od 8 maja 2016 roku zalogowanie do systemu MobileTouch jest możliwe tylko z użyciem najnowszego protokołu połączenia szyfrowanego TLS 1.2.</h3>
+                <p>Jeśli korzystasz z systemu Windows XP lub Vista zalogowanie nie będzie możliwe do czasu ich aktualizacji. <br>Jeśli korzystasz z systemu Windows 7 lub nowszego oraz przeglądarki Internet Explorer sprawdź ustawienia przeglądarki według poniższej instrukcji.</p>
+                <p class="text-special">Wybierz w <span class="bigger">Menu przeglądarki</span> <span class="abs-icon abs_navigate_next"></span> <span class="bigger">Narzędzia</span> <span class="abs-icon abs_navigate_next"></span> <span class="bigger">Opcje internetowe</span> <span class="abs-icon abs_navigate_next"></span> zakładka <span class="bigger">Zaawansowane</span>.</p>
+                <p>Przewiń w dół do pozycji Użyj szyfrowania TLS 1.2 i sprawdź, czy jest zaznaczona jak na zrzucie ekranu.</p>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <img src="img/tutorial.png" class="tutorial-image" alt="">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="copyrights">© 2014 by Asseco Business Solutions S.A.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script language=javascript>
+        var rev = "fwd";
+        function titlebar(val){
+            var msg  = "Zmiana ustawień logowania - MobileTouch";
+            var res = " ";
+            var speed = 100;
+            var pos = val;
+            // msg = "   |-"+msg+"-|";
+            msg = " " + msg + " ";
+            var le = msg.length;
+            if(rev == "fwd"){
+                if(pos < le){
+                    pos = pos+1;
+                    scroll = msg.substr(0,pos);
+                    document.title = scroll;
+                    timer = window.setTimeout("titlebar("+pos+")",speed);
+                }
+                else {
+                    rev = "bwd";
+                    timer = window.setTimeout("titlebar("+pos+")",speed);
+                }
+            }
+            else {
+                if(pos > 0) {
+                    pos = pos-1;
+                    var ale = le-pos;
+                    scrol = msg.substr(ale,le);
+                    document.title = scrol;
+                    timer = window.setTimeout("titlebar("+pos+")",speed);
+                }
+                else {
+                    rev = "fwd";
+                    timer = window.setTimeout("titlebar("+pos+")",speed);
+                }
+            }
+        }
+titlebar(0);
+</script>
+</body>
+</html>
