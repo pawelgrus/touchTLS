@@ -38,7 +38,7 @@
                         <li><a href="#">English</a></li>
                     </ul>
                 </div> -->
-                <img src="img/flag-pl.png" class="flag" alt=""> <a href="index.html" class="flag_link">Polski</a> &#8260; <img src="img/flag-en.png" class="flag" alt=""> <a href="index_en.html" class="flag_link">English</a>
+                <img src="img/flag-pl.png" class="flag" alt=""> <span class="flag_link" data-lang="pl">Polski</span> &#8260; <img src="img/flag-en.png" class="flag" alt=""> <a hspan class="flag_link" data-lang="en">English</span>
                 <img src="img/touch.png" class="touch" alt="">
             </div>
         </div>
@@ -47,13 +47,13 @@
     <section class="container">
         <div class="row info">
             <div class="col-xs-12 col-md-6 info_text">
-                <h3><span class="abs-icon abs_info_point"></span>Od 8 maja 2016 roku zalogowanie do systemu MobileTouch jest możliwe tylko z użyciem najnowszego protokołu połączenia szyfrowanego TLS 1.2.</h3>
-                <p>Jeśli korzystasz z systemu Windows XP lub Vista zalogowanie nie będzie możliwe do czasu ich aktualizacji. <br>Jeśli korzystasz z systemu Windows 7 lub nowszego oraz przeglądarki Internet Explorer sprawdź ustawienia przeglądarki według poniższej instrukcji.</p>
-                <p class="text-special">Wybierz w <span class="bigger">Menu przeglądarki</span> <span class="abs-icon abs_navigate_next"></span> <span class="bigger">Narzędzia</span> <span class="abs-icon abs_navigate_next"></span> <span class="bigger">Opcje internetowe</span> <span class="abs-icon abs_navigate_next"></span> zakładka <span class="bigger">Zaawansowane</span>.</p>
-                <p>Przewiń w dół do pozycji Użyj szyfrowania TLS 1.2 i sprawdź, czy jest zaznaczona jak na zrzucie ekranu.</p>
+                <h3><span class="abs-icon abs_info_point"></span>Please be informed, that from the 8th of May access to the Back Office Application of Mobile Touch will be possible only from browsers which support TLS 1.2 protocol.</h3>
+                <p>If you use Windows XP or Vista logging in will not be possible until a new version will be installed.<br>If you use Windows 7 or newer operating system and Internet Explorer browser please follow the manual below verify a settings.</p>
+                <p class="text-special">Please choose <span class="bigger">Menu</span> <span class="abs-icon abs_navigate_next"></span> <span class="bigger">Tools</span> <span class="abs-icon abs_navigate_next"></span> <span class="bigger">Internet Options</span> <span class="abs-icon abs_navigate_next"></span> <span class="bigger">Advanced</span> tab.</p>
+                <p>Scroll down to the Use TLS 1.2 and verify whether is ticked as it is on the following screen.</p>
             </div>
             <div class="col-xs-12 col-md-4 flexy">
-                <img src="img/tutorial.png" class="tutorial-image" alt="">
+                <img src="img/tutorial_en.png" class="tutorial-image" alt="">
             </div>
         </div>
     </section>
@@ -69,38 +69,12 @@
         </div>
     </footer>
 
-    <script>
+    <!-- <script>
 
-        // $(".flag_link").on('click', function(){
-        //     Cookies.set('language', $(this).attr('data-lang'));
-        // });
+        $(".flag_link").on('click', function(){
+            Cookies.set('language', $(this).attr('data-lang'));
+        });
 
-        // function autoDetectLanguage() {
-        //     var lang = window.navigator.language;
-        //     if (lang != "pl") {
-        //         window.location.replace("index_en.html");
-        //     }
-        // }
-
-        // function languageWatcher() {
-        //     var user_choice = Cookies.get('language');
-        //     if (typeof user_choice != 'undefined') {
-        //         console.log('User wybrał już język.')
-        //     } else {
-        //         autoDetectLanguage();
-        //     }
-        // }
-
-
-
-
-        // $(document).ready(function(){
-        //     console.log( "ready to go!" );
-        //     languageWatcher();
-        // });
-
-
-        
         function autoDetectLanguage() {
             var lang = window.navigator.language;
             if (lang != "pl") {
@@ -121,6 +95,15 @@
 
 
         $(document).ready(function(){
+            console.log( "ready to go!" );
+            languageWatcher();
+        });
+
+    </script> -->
+
+    <script>
+
+$(document).ready(function(){
             console.log( "ready to go!" );
 
             $(".flag_link").on('click', function(){
