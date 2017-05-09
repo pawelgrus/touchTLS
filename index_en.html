@@ -38,7 +38,7 @@
                         <li><a href="#">English</a></li>
                     </ul>
                 </div> -->
-                <img src="img/flag-pl.png" class="flag" alt=""> <span class="flag_link" data-lang="pl">Polski</span> &#8260; <img src="img/flag-en.png" class="flag" alt=""> <a hspan class="flag_link" data-lang="en">English</span>
+                <img src="img/flag-pl.png" class="flag" alt=""> <a class="flag_link" data-lang="pl">Polski</a> &#8260; <img src="img/flag-en.png" class="flag" alt=""> <a class="flag_link" data-lang="en">English</a>
                 <img src="img/touch.png" class="touch" alt="">
             </div>
         </div>
@@ -71,16 +71,25 @@
 
 
 
-    <script>
+    <!-- <script>
 
         $(".flag_link").on('click', function(){
             Cookies.set('language', $(this).attr('data-lang'));
+            var active_lang = Cookies.get('language');
+            if (active_lang === 'pl') {
+                window.location.replace("index.html");
+            } else {
+                window.location.replace("index_en.html");
+            }
         });
 
         function autoDetectLanguage() {
             var lang = window.navigator.language;
             if (lang != "pl") {
+                Cookies.set('language', 'en');
                 window.location.replace("index_en.html");
+            } else {
+                Cookies.set('language', 'pl');
             }
         }
 
@@ -101,7 +110,7 @@
             languageWatcher();
         });
 
-    </script>
+    </script> -->
 
 
 
@@ -125,7 +134,7 @@
 
 
 
-    <!-- <script>
+    <script>
 
 $(document).ready(function(){
             console.log( "ready to go!" );
@@ -158,7 +167,7 @@ $(document).ready(function(){
             }
         });
 
-    </script> -->
+    </script>
 
     <!-- <script language=javascript>
         var rev = "fwd";

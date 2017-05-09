@@ -71,10 +71,16 @@
 
 
 
-      <script>
+      <!-- <script>
 
         $(".flag_link").on('click', function(){
             Cookies.set('language', $(this).attr('data-lang'));
+            var active_lang = Cookies.get('language');
+            if (active_lang === 'pl') {
+                window.location.replace("index.html");
+            } else {
+                window.location.replace("index_en.html");
+            }
         });
 
         function autoDetectLanguage() {
@@ -101,10 +107,13 @@
 
         $(document).ready(function(){
             console.log( "ready to go!" );
+
+            var lang = window.navigator.language;
+
             languageWatcher();
         });
 
-    </script>
+    </script> -->
 
 
 
@@ -133,8 +142,7 @@
 
 
 
-
-    <!-- <script>
+    <script>
 
         $(document).ready(function(){
             console.log( "ready to go!" );
@@ -167,7 +175,7 @@
             }
         });
 
-    </script> -->
+    </script>
 
     <!-- <script language=javascript>
         var rev = "fwd";
