@@ -38,7 +38,8 @@
                         <li><a href="#">English</a></li>
                     </ul>
                 </div> -->
-                <img src="img/flag-pl.png" class="flag" alt=""> <a class="flag_link" data-lang="pl">Polski</a> &#8260; <img src="img/flag-en.png" class="flag" alt=""> <a class="flag_link" data-lang="en">English</a>
+                <img src="img/flag-pl.png" class="flag" alt=""> <a href="index.html" class="flag_link">Polski</a> &#8260; 
+                <img src="img/flag-en.png" class="flag" alt=""> <a href="index_en.html" class="flag_link">English</a>
                 <img src="img/touch.png" class="touch" alt="">
             </div>
         </div>
@@ -112,29 +113,46 @@
 
     </script> -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script>
+
+        $(document).ready(function(){
+
+            var user_choice = Cookies.get('language');
+            var lang = window.navigator.language;
+            
+            if (lang != "pl" && typeof user_choice == 'undefined') {
+                window.location.replace("index_en.html");
+                Cookies.set('language', 'en');
+            } else {
+                Cookies.set('language', 'pl');
+            }
+
+        });
+        
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!--  <script>
 
 $(document).ready(function(){
             console.log( "ready to go!" );
@@ -167,7 +185,7 @@ $(document).ready(function(){
             }
         });
 
-    </script>
+    </script> -->
 
     <!-- <script language=javascript>
         var rev = "fwd";
