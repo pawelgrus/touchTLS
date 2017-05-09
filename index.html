@@ -69,42 +69,21 @@
         </div>
     </footer>
 
-    <script>
-
-        // $(".flag_link").on('click', function(){
-        //     Cookies.set('language', $(this).attr('data-lang'));
-        // });
-
-        // function autoDetectLanguage() {
-        //     var lang = window.navigator.language;
-        //     if (lang != "pl") {
-        //         window.location.replace("index_en.html");
-        //     }
-        // }
-
-        // function languageWatcher() {
-        //     var user_choice = Cookies.get('language');
-        //     if (typeof user_choice != 'undefined') {
-        //         console.log('User wybrał już język.')
-        //     } else {
-        //         autoDetectLanguage();
-        //     }
-        // }
 
 
+      <script>
 
+        $(".flag_link").on('click', function(){
+            Cookies.set('language', $(this).attr('data-lang'));
+        });
 
-        // $(document).ready(function(){
-        //     console.log( "ready to go!" );
-        //     languageWatcher();
-        // });
-
-
-        
         function autoDetectLanguage() {
             var lang = window.navigator.language;
             if (lang != "pl") {
+                Cookies.set('language', 'en');
                 window.location.replace("index_en.html");
+            } else {
+                Cookies.set('language', 'pl');
             }
         }
 
@@ -119,6 +98,43 @@
 
 
 
+
+        $(document).ready(function(){
+            console.log( "ready to go!" );
+            languageWatcher();
+        });
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <script>
 
         $(document).ready(function(){
             console.log( "ready to go!" );
@@ -151,7 +167,7 @@
             }
         });
 
-    </script>
+    </script> -->
 
     <!-- <script language=javascript>
         var rev = "fwd";
